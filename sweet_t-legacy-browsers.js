@@ -229,7 +229,7 @@ async function startKinescopeFilm() {
       url: KINESCOPE_VIDEO_URL,
       size: {width: '100%', height: '100%'},
        behavior: {
-        autoPlay: true,
+        autoPlay: false,
         muted: false,
         playsInline: true,
         keyboard: false,
