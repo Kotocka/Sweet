@@ -232,8 +232,9 @@ async function startKinescopeFilm() {
     kinescopePlayer = await factory.create('kinescope-host', {
       url: KINESCOPE_VIDEO_URL,
       size: {width: '100%', height: '100%'},
-      behavior: {
+     behavior: {
         autoPlay: true,
+        muted: false,
         playsInline: true,
         keyboard: false,
         localStorage: false,
