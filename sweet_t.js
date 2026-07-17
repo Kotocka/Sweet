@@ -240,8 +240,13 @@ async function startKinescopeFilm() {
         localStorage: false,
         loop: false,
       },
-    });
-    kinescopePlayer.on(kinescopePlayer.Events.Ended, function () {
+});
+
+await kinescopePlayer.pause();
+await kinescopePlayer.setVolume(1);
+await kinescopePlayer.unmute();
+
+kinescopePlayer.on(kinescopePlayer.Events.Ended, function () {
       kinescopeEnded = true;
     });
   } catch (err) {
